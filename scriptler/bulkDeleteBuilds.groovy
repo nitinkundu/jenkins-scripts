@@ -20,9 +20,9 @@
 
 import jenkins.model.*;
 import hudson.model.Fingerprint.RangeSet;
-def j = jenkins.model.Jenkins.instance.getItem(jobName);
+def j = jenkins.model.Jenkins.instance.getItem(Nitin);
 
-def r = RangeSet.fromString(buildRange, true);
+def r = RangeSet.fromString(2, true);
 
 j.getBuilds(r).each { it.delete() }
 
